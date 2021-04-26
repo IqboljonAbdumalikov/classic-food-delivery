@@ -1,0 +1,148 @@
+/*FONT_FAMILY*/
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/montserrat-v15-latin-300.woff2") format("woff2"),
+       url("../fonts/montserrat-v15-latin-300.woff") format("woff");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/montserrat-v15-latin-regular.woff2") format("woff2"),
+       url("../fonts/montserrat-v15-latin-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/montserrat-v15-latin-600.woff2") format("woff2"),
+       url("../fonts/montserrat-v15-latin-600.woff") format("woff");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/montserrat-v15-latin-700.woff2") format("woff2"),
+       url("../fonts/montserrat-v15-latin-700.woff") format("woff");
+}
+
+/*CUSTOM PROPERTIES*/
+:root {
+  --font-family: "Montserrat", "Arial", sans-serif;
+}
+/* #BOX-SIZING */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+h1, h2, h3 {
+  font-weight: 700;
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+/* #GLOBAL-STYLES */
+body {
+  font-family: var(--font-family);
+  color: #222;
+}
+
+/* VISUALLY HIDING CODE */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* CONTAINER */
+
+.container {
+  width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*SITE-HEADER*/
+.site-header {
+  background-color: #f0f5fb;
+  padding-top: 25px;
+}
+.sitenav__container {
+  display: flex;
+  align-items: center;
+}
+.sitenav__list {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.sitenav__item:not(.sitenav__item:last-child) {
+  margin-right: 40px;
+}
+.sitenav__link {
+  color: #222;
+  text-decoration: none;
+}
+.link--logo {
+  margin-right: auto;
+  margin-left: auto;
+}
+.sitenav__logo {
+  display: block;
+}
+.sitenav__span:before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  margin-right: 9px;
+  border-radius: 50%;
+  background-color: #46cb72;
+}
+.sitenav__span {
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+}
+
+.link--phone-number {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #222;
+}
+.link--phone-number:before {
+  content: "";
+  background-image: url("../images/phone-icon.svg"),
+                    linear-gradient(287.74deg, #F58656 8.52%, #FE5626 92.72%);
+  box-shadow: 0px 4px 8px rgba(205, 169, 41, 0.26);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 59px;
+  width: 33px;
+  height: 33px;
+  margin-right: 16px;
+  padding: 10px 9px 9px 10px;
+}
